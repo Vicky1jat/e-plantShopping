@@ -8,9 +8,9 @@ export const CartSlice = createSlice({
   reducers: {
     addItem: (state, action) => {
       const {name,image,cost} = action.payload;
-      const existingItme = state.items.find(item => item.name == name);
-      if(existingItme){
-        existingItme.quatity++;
+      const existingItem = state.items.find(item => item.name == name);
+      if(existingItem){
+        existingItem.quatity++;
       }
       else{
         state.items.push({name,image,cost,quantity:1});
